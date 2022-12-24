@@ -9,6 +9,7 @@ $dark_text:#2a2a2a;
 
 html {
     padding-top: 50px;
+    scroll-behavior: smooth;
 }
 
 // Body
@@ -261,68 +262,6 @@ section {
 }
 
 /*
-** Detail Page CSS
-*/
-.detail_header {
-    background: url(https://source.unsplash.com/1600x900/?beach);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    position: relative;
-
-    &::before {
-        content: "";
-        width: 100%;
-        height: 80vh;
-        background: rgba(0, 0, 0, 0.2);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    h1,
-    p {
-        position: relative;
-        z-index: 99;
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    h1 {
-        color: $white;
-        font-weight: 800;
-        font-size: 3rem;
-    }
-
-    p {
-        color: $gray;
-    }
-}
-
-article {
-    padding: 1rem 0;
-
-    img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-        border-radius: 30px;
-    }
-
-    .btn-primary {
-        width: 100%;
-
-        i {
-            font-size: 1.5rem;
-        }
-    }
-}
-
-/*
 ** Utils CSS
 */
 .btn-primary {
@@ -333,5 +272,28 @@ article {
     &:focus {
         background: $primary_hover !important;
         border-color: $primary_hover;
+    }
+}
+
+.back_to_top {
+    background: $primary;
+    width: 60px;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    border-radius: 100%;
+    text-align: center;
+    color: $white;
+    padding: .5rem;
+    cursor: pointer;
+    display: none;
+
+    i {
+        font-size: 1.7rem;
+    }
+
+    &:hover {
+        background: $primary_hover;
+        color: $white;
     }
 }
