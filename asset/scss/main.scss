@@ -1,0 +1,337 @@
+// Variable
+$bg:#eff0f3;
+$white:#fffffe;
+$gray:#eff0f3;
+$primary:#ff8e3c;
+$primary_hover:#e58037;
+$dark:#0d0d0d;
+$dark_text:#2a2a2a;
+
+html {
+    padding-top: 50px;
+}
+
+// Body
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*
+** Home Page CSS
+*/
+
+// Navbar
+.navbar {
+    background: $bg;
+
+    .navbar-brand {
+        font-weight: 800;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        outline: none !important;
+        box-shadow: none !important;
+
+        i {
+            font-size: 1.6rem;
+        }
+    }
+
+    .active {
+        color: $primary !important;
+        font-weight: 600;
+    }
+}
+
+// Header
+.header {
+    background: $bg;
+    padding: 2rem 0;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    span {
+        color: $primary;
+    }
+}
+
+
+// Section
+section {
+    padding: 5rem 0;
+
+    .section_title {
+        text-align: center;
+        margin-bottom: .6rem;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .section_description {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: $dark_text;
+    }
+}
+
+// About
+.about {
+    .section_title {
+        color: $dark;
+    }
+
+    .card {
+        background: $gray;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        transition: all .5s ease-in-out;
+
+        h3 {
+            color: $dark_text;
+            font-size: 1.4rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 0;
+            color: $dark_text;
+        }
+
+        &:hover {
+            transform: translateY(-6px);
+            cursor: pointer;
+        }
+    }
+}
+
+// Service
+.service {
+    .section_description {
+        color: $dark_text;
+    }
+
+    .card {
+        text-align: -webkit-center;
+        border-radius: 10px;
+        transition: all .5s ease-in-out;
+        margin-bottom: 1rem;
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .logo {
+            background: $primary;
+            width: 80px;
+            padding: .7rem;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+
+            i {
+                color: $white;
+                font-size: 2.3rem;
+            }
+        }
+
+        &:hover {
+            background: $primary;
+            color: $white;
+            cursor: pointer;
+
+            .logo {
+                background: $white;
+
+                i {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// Portfolio
+.portfolio {
+    .section_description {
+        color: $dark_text;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    }
+}
+
+// Contact
+.contact {
+    background: $bg;
+
+    .section_description {
+        color: $dark_text;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .card {
+        border-radius: 10px;
+
+        .content {
+            display: flex;
+            align-items: center;
+            padding: .5rem 0;
+
+            i {
+                color: $primary;
+                font-size: 2rem;
+                margin-right: .8rem;
+            }
+
+            h3,
+            p {
+                margin-bottom: 0;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .hr-dotted {
+                border-top: 1px dotted;
+                opacity: .25;
+                margin: 0;
+            }
+        }
+    }
+
+
+}
+
+// Footer
+.footer {
+    background: $bg;
+    text-align: center;
+    padding: 1rem 0;
+
+    p {
+        margin-bottom: 0;
+
+        i {
+            color: #d43434;
+        }
+    }
+
+    a {
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary_hover;
+        }
+    }
+}
+
+/*
+** Detail Page CSS
+*/
+.detail_header {
+    background: url(https://source.unsplash.com/1600x900/?beach);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 80vh;
+        background: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    h1,
+    p {
+        position: relative;
+        z-index: 99;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        color: $white;
+        font-weight: 800;
+        font-size: 3rem;
+    }
+
+    p {
+        color: $gray;
+    }
+}
+
+article {
+    padding: 1rem 0;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        border-radius: 30px;
+    }
+
+    .btn-primary {
+        width: 100%;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/*
+** Utils CSS
+*/
+.btn-primary {
+    background: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+        background: $primary_hover !important;
+        border-color: $primary_hover;
+    }
+}
